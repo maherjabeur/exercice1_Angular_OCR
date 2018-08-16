@@ -1,0 +1,13 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveValue > 0,
+                'list-group-item-danger': loveValue < 0 }">
+
+
+  <div class="float-right">{{ lastUpdate |  date: 'short' | uppercase }}</div>
+  <div><h4>{{ postName }} </h4></div>
+  <p> {{ postContent }}</p>
+
+
+  <button class="btn btn-success"   (click)="plusLoveIt()">Love It</button>
+  <button class="btn btn-danger"   (click)="minusLoveIt()">Don't Love It</button>
+</li>
